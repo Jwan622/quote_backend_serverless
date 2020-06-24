@@ -59,7 +59,7 @@ provider:
 
 functions:
   quote:
-    handler: quote.lambdaHandler
+    handler: quote_handler.lambdaHandler
     events:
       - http:
           path: quote
