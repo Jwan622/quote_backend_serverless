@@ -17,6 +17,8 @@ provider:
 #  exclude:
 #    - exclude-me.py
 #    - exclude-me-dir/**
+plugins:
+  - serverless-offline
 
 functions:
   quote:

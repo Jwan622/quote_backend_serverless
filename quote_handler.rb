@@ -1,5 +1,5 @@
 require 'json'
-require 'httparty'
+require_relative 'httparty'
 
 def lambdaHandler(event:, context:)
   puts "IT IS RUNNING"
@@ -7,9 +7,8 @@ def lambdaHandler(event:, context:)
   {
     statusCode: 200,
     body: {
-      message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: quote(event)
-    }.to_json
+      body: quote(event).to_json
+    }
   }
 end
 
