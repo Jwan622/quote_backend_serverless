@@ -8,13 +8,13 @@ def lambdaHandler(event:, context:)
     statusCode: 200,
     body: {
       message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: quote
+      input: quote(event)
     }.to_json
   }
 end
 
-def quote
-  endpoint = endpoint_for_symbol('AAPL')
+def quote(event)
+  endpoint = endpoint_for_symbol(event["queryStringParameters"]["symbol"])
   response = raw_response(endpoint)
   parse_quote(response)
 end
