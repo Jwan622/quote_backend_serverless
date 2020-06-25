@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
-
-gem 'rspec'
-gem 'httparty'
+source 'https://rubygems.org' do
+  gem 'rspec'
+  gem 'httparty'
+end

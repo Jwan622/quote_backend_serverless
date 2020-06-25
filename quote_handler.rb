@@ -1,4 +1,5 @@
 require 'json'
+require 'httparty'
 
 def lambdaHandler(event:, context:)
   puts "IT IS RUNNING"
